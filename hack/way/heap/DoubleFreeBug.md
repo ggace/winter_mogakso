@@ -77,3 +77,6 @@ _int_free (mstate av, mchunkptr p, int have_lock) {
 if (__glibc_unlikely (e->key == tcache))
 ```
 이 부분이 통과하면 double free가 가능하다. 이때, e->key가 한비트만이라도 바뀌면 double free가 가능하다.
+
+## 문제
+- [tcache_dup](/hack/dreamhack/off_by_one_001/README.md)

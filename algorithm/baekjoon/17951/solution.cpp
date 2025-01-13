@@ -23,43 +23,6 @@ typedef unsigned long long ull;
 
 using namespace std;
 
-struct Direction {
-    ll dx;
-    ll dy;
-};
-
-struct Position {
-    ll x;
-    ll y;
-};
-
-ll fastpow(ll a, ll n, ll c){
-    ll result=1;
-    while(n){
-        if(n&1){
-            result *=a;
-            if(result>=c) result%=c;
-        }
-        a*=a;
-        if(a>=c) a%=c;
-        n>>=1;
-    }
-    return result;
-}
-
-vector<ll> prime_list;
-bool is_prime[PRIME_SIZE+1] = {1,1,0}; // 0이 소수
-void siv(ll n) {
-    for(int i = 2; i <= n; i++) {
-        if(!is_prime[i]) prime_list.push_back(i);
-        for(auto p : prime_list) {
-            if(i*p > n) break;
-            is_prime[i*p] = true;
-            if(i%p == 0) break;
-        }
-    }
-}
-
 ll n, k;
 ll sums[101010] = {0, };
 
@@ -90,21 +53,16 @@ int main(int argc, char* argv[]) {
         
         ll start_index = 1;
         bool is_too_much = false;
-        debug(left << " " <<  cur_target << " " << right);
         for(ll i = 0; i < k; i++) {
             
             ll next_index = find_target(start_index, cur_target);
             if(next_index == -1) {
                 is_too_much = true;
-                debug("break");
                 break;
             }
-
-            debug( start_index << ": " << sums[next_index] - sums[start_index-1]);
             ++next_index;
             start_index = next_index;
         }
-        debug("");
 
         if(is_too_much) {
             right = cur_target;
