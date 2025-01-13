@@ -1,6 +1,6 @@
 # 동계 모각소 개인 학습 페이지
 
-## 모각소 모임
+## 활동 정리
 ### 2025.01.08
 #### dreamhack
 - [off_by_one_001](/hack/dreamhack/off_by_one_001/README.md)
@@ -9,7 +9,7 @@
 #### dreamhack
 - [tcache_dup](/hack/dreamhack//tcache_dup/README.md)
 
-### 2025.01.11
+### 2025.01.10
 #### baekjoon
 - [찐 Even Numbe(32981)](/algorithm/baekjoon/32981/README.md)
 - [흩날리는 시험지 속에서 내 평점이 느껴진거야(17951)](/algorithm/baekjoon/17951/README.md)
