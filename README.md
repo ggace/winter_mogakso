@@ -21,6 +21,11 @@
 ### 2025.01.13
 #### baekjoon
 - [벌레컷(27651)](/algorithm/baekjoon/27651/README.md)
+- [구간합 구하기(2042)](/algorithm/baekjoon/2042/README.md)
+
+### 2025.01.14
+#### baekjooon
+- [최솟값과 최댓값(2357)]
 
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)

@@ -33,7 +33,7 @@ struct Position {
     ll y;
 };
 
-ll fastpow(ll a, ll n, ll c){
+ll fastpow_with_modular(ll a, ll n, ll c){
     ll result=1;
     while(n){
         if(n&1){
@@ -77,7 +77,7 @@ int main(int argc, char* argv[]) {
             continue;
         }
 
-        result = fastpow(5, x-1, 1000000007);
+        result = fastpow_with_modular(5, x-1, 1000000007);
         result *= 4;
         result %= 1000000007;
 

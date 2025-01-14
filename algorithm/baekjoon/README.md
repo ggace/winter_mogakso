@@ -14,3 +14,7 @@
 
 ### 2025.01.13
 - [벌레컷(27651)](/algorithm/baekjoon/27651/README.md)
+- [구간합 구하기(2042)](/algorithm/baekjoon/2042/README.md)
+
+### 2025.01.14
+- [최솟값과 최댓값(2357)]

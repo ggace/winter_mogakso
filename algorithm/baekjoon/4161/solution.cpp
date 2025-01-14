@@ -33,7 +33,7 @@ struct Position {
     ll y;
 };
 
-ll fastpow(ll a, ll n, ll c){
+ll fastpow_with_modular(ll a, ll n, ll c){
     ll result=1;
     while(n){
         if(n&1){
