@@ -53,14 +53,14 @@ void update_value(ll index, ll value) {
     if(real_index >= segtree.size()) {
         return;
     }
-    ll cur_value = segtree[real_index];
-    ll value_change = value - cur_value;
+
+    segtree[real_index] = value;
     while(true) {
-        segtree[real_index] += value_change;
+        real_index /= 2;
+        segtree[real_index] = segtree[real_index*2] + segtree[real_index*2+1];
         if(real_index == 1) {
             break;
         }
-        real_index /= 2;
     }
 }
 
