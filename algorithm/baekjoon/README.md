@@ -17,4 +17,5 @@
 - [구간합 구하기(2042)](/algorithm/baekjoon/2042/README.md)
 
 ### 2025.01.14
-- [최솟값과 최댓값(2357)]
+- [최솟값과 최댓값(2357)](/algorithm/baekjoon/2357/README.md)
+- [구간곱 구하기(11505)](/algorithm/baekjoon/11505/README.md)
