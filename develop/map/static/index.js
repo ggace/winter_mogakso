@@ -1,7 +1,7 @@
 urlSearch = new URLSearchParams(location.search);
 latitude = urlSearch.get('latitude')
 longitude = urlSearch.get('longitude')
-level = 2
+level = 3
 
 if(latitude == null || longitude == null) {
     console.log("Nan yes")
@@ -37,7 +37,7 @@ var clusterer = new kakao.maps.MarkerClusterer({
     disableClickZoom: true,
     styles: [{
         width : '53px', height : '52px',
-        background: 'url("/cluster.png") no-repeat',
+        background: 'url("/static/resources/cluster.png") no-repeat',
         backgroundSize: "cover",
         color: '#fff',
         textAlign: 'center',
@@ -53,29 +53,31 @@ $.ajax({
     success: function(result) {
         
         
-        var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
-        var imageSize = new kakao.maps.Size(24, 35); 
+        var imageSrc = "/static/resources/marker.png"; 
+        var imageSize = new kakao.maps.Size(30, 45); 
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
         for (var i = 0; i < result.length; i++) {
             let position = {
                 title: result[i]["학교명"],
                 latlng: new kakao.maps.LatLng(result[i]["위도"], result[i]["경도"])
             }
-            
+
             var infowindow = new kakao.maps.InfoWindow({
                 content: `
-                    <div style="padding: 10px; height: 100px; width: 250px">
-                        <div style="font-size: 15px">
-                            ${result[i]["학교명"]}
-                        </div>
-                        <div style="font-size: 10px">
-                            ${result[i]["우편번호"]} ${result[i]["도로명주소"]}
-                        </div>
+                <div style="padding: 10px; height: 100px; width: 250px">
+                    <div style="font-size: 15px">
+                        ${result[i]["학교명"]}
                     </div>
+                    <div style="font-size: 10px">
+                        ${result[i]["우편번호"]} ${result[i]["도로명주소"]}
+                    </div>
+
+                </div>
                 `,
                 removable: true
             });
 
+            
             var marker = new kakao.maps.Marker({
                 map: map, 
                 position: position.latlng, 

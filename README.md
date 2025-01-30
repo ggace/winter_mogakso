@@ -32,6 +32,28 @@
 #### develop
 - [카카오맵을 사용한 대학교 지도 사이트(카카오 맵 사용, 대학교 검색)](/develop/map/)
 
+### 2025.01.16
+#### algorithm
+- [축구(1344)](/algorithm/baekjoon/1344/README.md)
+- [알고리즘 수업 - 피보나치 수 1(24416)](/algorithm/baekjoon/24416/README.md)
+
+### 2025.01.19
+#### develop
+- [코드포스(Div.3)](/algorithm/codeforce/20250119/)
+
+### 2025.01.20
+#### algorithm
+- [피보나치수와 최대공약수(11778)](/algorithm/baekjoon/11778/README.md)
+
+### 2025.01.25
+#### algorithm
+- [나이트의 이동(7562)](/algorithm/baekjoon/7562/README.md)
+
+### 2025.01.26
+#### dreamhack
+- [tcache_dup2](/hack/dreamhack/tcache_dup2/README.md)
+- [sint](/hack/dreamhack/sint/README.md)
+
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)

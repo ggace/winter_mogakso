@@ -19,3 +19,13 @@
 ### 2025.01.14
 - [최솟값과 최댓값(2357)](/algorithm/baekjoon/2357/README.md)
 - [구간곱 구하기(11505)](/algorithm/baekjoon/11505/README.md)
+
+### 2025.01.16
+- [축구(1344)](/algorithm/baekjoon/1344/README.md)
+- [알고리즘 수업 - 피보나치 수 1(24416)](/algorithm/baekjoon/24416/README.md)
+
+### 2025.01.20
+- [피보나치수와 최대공약수(11778)](/algorithm/baekjoon/11778/README.md)
+
+### 2025.01.25
+- [나이트의 이동(7562)](/algorithm/baekjoon/7562/README.md)

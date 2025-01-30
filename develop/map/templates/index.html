@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>지도 생성하기</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ API_KEY }}&libraries=services,clusterer,drawing"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ API_KEY}}"></script>
+
+        <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+        
+    </head>
+    <body>
+        <!-- 지도를 표시할 div 입니다 -->
+        <div id="map"></div>
+    </body>
+</html>
