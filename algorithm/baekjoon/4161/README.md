@@ -188,16 +188,26 @@ $$
 #### 라 하자. 각 교점을 구하면,
 
 $$ 
-f(x) = g(x) \rightarrow ( \frac{b-2a}{3} , \frac{a-b-t}{3} ) \\
-f(x) = h(x) \rightarrow (0, - \frac{2a+b+4t}{12} ) \\
-f(x) = i(x) \rightarrow (- \frac{2a+b}{5}, \frac{2a+b-5t}{15} ) \\
-g(x) = h(x) \rightarrow (0, - \frac{a+2b+5t}{15} ) \\
-g(x) = i(x) \rightarrow (- \frac{a+2b}{4} , \frac{a+2b-5t}{12}) \\
-h(x) = i(x) \rightarrow (0, -\frac{t}{3} )
+f ( x ) = g ( x ) \rightarrow ( \frac{b-2a}{3} , \frac{a-b-t}{3} )
+$$
+$$
+f ( x ) = h ( x ) \rightarrow ( 0 , - \frac{2a+b+4t}{12} )
+$$
+$$
+f ( x ) = i ( x ) \rightarrow ( - \frac{2a+b}{5} , \frac{2a+b-5t}{15} ) 
+$$
+$$
+g ( x ) = h ( x ) \rightarrow ( 0 , - \frac{a+2b+5t}{15} )
+$$
+$$
+g ( x ) = i ( x ) \rightarrow ( - \frac{a+2b}{4} , \frac{a+2b-5t}{12} ) 
+$$
+$$
+h ( x ) = i ( x ) \rightarrow ( 0, - \frac{t}{3} )
 $$
 이다.
 
-#### 이때, 함수 $f$~$i$의 기울기는 각각 $-\frac{3}{4}$, $-\frac{3}{5}$, $-\frac{1}{3}$이므로, 좌표의 $-2$ ~ $2$의 범위내에 최솟값이 있을것이라 생각했다. 
+#### 이때, 함수 $f$ ~ $i$ 의 기울기는 각각 $-\frac{3}{4}$, $-\frac{3}{5}$, $-\frac{1}{3}$이므로, 좌표의 $-2$ ~ $2$의 범위내에 최솟값이 있을것이라 생각했다. 
 
 ## 3. 코드
 ```c
