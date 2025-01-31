@@ -138,47 +138,40 @@ v
 $$
 #### 이다. 
 $$
-R = |\frac{2a+b}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
-|-\frac{2b+a}{3} - \frac{4}{3} \lambda_1 - \frac{5}{3} \lambda_2 | + 
-|\lambda_1| + 
-|\lambda_2| 
+R 
+= | \frac{2a+b}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + | -\frac{2b+a}{3} - \frac{4}{3} \lambda_1 - \frac{5}{3} \lambda_2 | + | \lambda_1 | + | \lambda_2 | 
 $$
 $$
-= |\frac{2a+b}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + 
-|\frac{2b+a}{3} + \frac{4}{3} \lambda_1 + \frac{5}{3} \lambda_2 | + 
-|\lambda_1| + 
-|\lambda_2|
+= | \frac{2a+b}{3} + \frac{5}{3} \lambda_1 + \frac{4}{3} \lambda_2 | + | \frac{2b+a}{3} + \frac{4}{3} \lambda_1 + \frac{5}{3} \lambda_2 | + | \lambda_1 | + | \lambda_2 |
 $$
-이다. 이때, 
+#### 이다. 
+
+#### 이때, 
 $$
-\lambda_1 = 3n_1 + r_1 \\
-\lambda_2 = 3n_2 + r_2 \\
- = 3(n_1+y) + r_1 + t 
+\lambda_1 = 3n_1 + r_1 , \lambda_2 = 3n_2 + r_2 \\ 
+= 3(n_1+y) + r_1 + t 
 $$
 $$
 (n_2 = n_1 + y, r_2 = r_1+t)
 $$
-이라 하자.
+#### 이라 하자.
 
-이에 따라 아까 정리한 식을 정리하면, 
+#### 이에 따라 아까 정리한 식을 정리하면, 
 $$
-result: |\frac{2a+b+4t}{3} + 3r_1 + 9n_1 + 4y|
- + |\frac{a+2b+5t}{3} + 3r_1 + 9n_1 + 5y|
- + |3n_1 + r_1|
- + |3n_1 + r_1 + 3y + t|
+result: | \frac{2a+b+4t}{3} + 3r_1 + 9n_1 + 4y | + | \frac{a+2b+5t}{3} + 3r_1 + 9n_1 + 5y | + | 3n_1 + r_1 | + | 3n_1 + r_1 + 3y + t |
 $$
-이다. 
+#### 이다. 
 
-$3n_1 + r_1$은 어떠한 수도 될 수 있으며, 모든 부분에서 치환 가능하므로 $x = 3n_1 + r_1$이라 하자.
+#### $3n_1 + r_1$은 어떠한 수도 될 수 있으며, 모든 부분에서 치환 가능하므로 $x = 3n_1 + r_1$이라 하자.
 
-이를 다시 정리하면, 
+#### 이를 다시 정리하면, 
 $$
-|\frac{2a+b+4t}{3} + 3x + 4y| + |\frac{a+2b+5t}{3} + 3x + 5y| + |x| + |x + 3y + t|
+| \frac{2a+b+4t}{3} + 3x + 4y | + | \frac{a+2b+5t}{3} + 3x + 5y | + | x | + | x + 3y + t |
 $$
-이다. 
+#### 이다. 
 
 ### 4. 교점
-각 절댓값 안의 식 간의 교점을 살펴보자.
+#### 각 절댓값 안의 식 간의 교점을 살펴보자.
 
 $$
 f(x) = \frac{2a+b+4t}{3} + 3x + 4y \\
@@ -186,19 +179,19 @@ g(x) = \frac{a+2b+5t}{3} + 3x + 5y \\
 h(x) = x \\
 i(x) = x + 3y + t
 $$
-라 하자. 각 교점을 구하면,
+#### 라 하자. 각 교점을 구하면,
 
 $$ 
-f(x) = g(x) \rightarrow (\frac{b-2a}{3}, \frac{a-b-t}{3}) \\
-f(x) = h(x) \rightarrow (0, -\frac{2a+b+4t}{12}) \\
-f(x) = i(x) \rightarrow (-\frac{2a+b}{5}, \frac{2a+b-5t}{15}) \\
-g(x) = h(x) \rightarrow (0, -\frac{a+2b+5t}{15}) \\
-g(x) = i(x) \rightarrow (-\frac{a+2b}{4}, \frac{a+2b-5t}{12}) \\
-h(x) = i(x) \rightarrow (0, -\frac{t}{3})
+f(x) = g(x) \rightarrow ( \frac{b-2a}{3}, \frac{a-b-t}{3} ) \\
+f(x) = h(x) \rightarrow (0, - \frac{2a+b+4t}{12} ) \\
+f(x) = i(x) \rightarrow (- \frac{2a+b}{5}, \frac{2a+b-5t}{15} ) \\
+g(x) = h(x) \rightarrow (0, - \frac{a+2b+5t}{15} ) \\
+g(x) = i(x) \rightarrow (- \frac{a+2b}{4} , \frac{a+2b-5t}{12}) \\
+h(x) = i(x) \rightarrow (0, -\frac{t}{3} )
 $$
 이다.
 
-이때, 함수 $f$~$i$의 기울기는 각각 $-\frac{3}{4}$, $-\frac{3}{5}$, $-\frac{1}{3}$이므로, 좌표의 $-2$ ~ $2$의 범위내에 최솟값이 있을것이라 생각했다. 
+#### 이때, 함수 $f$~$i$의 기울기는 각각 $-\frac{3}{4}$, $-\frac{3}{5}$, $-\frac{1}{3}$이므로, 좌표의 $-2$ ~ $2$의 범위내에 최솟값이 있을것이라 생각했다. 
 
 ## 3. 코드
 ```c
