@@ -174,15 +174,21 @@ $$
 #### 각 절댓값 안의 식 간의 교점을 살펴보자.
 
 $$
-f(x) = \frac{2a+b+4t}{3} + 3x + 4y \\
-g(x) = \frac{a+2b+5t}{3} + 3x + 5y \\
-h(x) = x \\
+f(x) = \frac{2a+b+4t}{3} + 3x + 4y
+$$
+$$
+g(x) = \frac{a+2b+5t}{3} + 3x + 5y
+$$
+$$
+h(x) = x
+$$
+$$
 i(x) = x + 3y + t
 $$
 #### 라 하자. 각 교점을 구하면,
 
 $$ 
-f(x) = g(x) \rightarrow ( \frac{b-2a}{3}, \frac{a-b-t}{3} ) \\
+f(x) = g(x) \rightarrow ( \frac{b-2a}{3} , \frac{a-b-t}{3} ) \\
 f(x) = h(x) \rightarrow (0, - \frac{2a+b+4t}{12} ) \\
 f(x) = i(x) \rightarrow (- \frac{2a+b}{5}, \frac{2a+b-5t}{15} ) \\
 g(x) = h(x) \rightarrow (0, - \frac{a+2b+5t}{15} ) \\
