@@ -188,22 +188,22 @@ $$
 #### 라 하자. 각 교점을 구하면,
 
 $$ 
-f(x) = g(x) : ( \frac{b-2a}{3} , \frac{a-b-t}{3} )
+f(x) = g(x) : x= \frac{b-2a}{3} ,y= \frac{a-b-t}{3}
 $$
 $$
-f(x) = h(x) : ( 0 , - \frac{2a+b+4t}{12} )
+f(x) = h(x) : x= 0 y= -\frac{2a+b+4t}{12}
 $$
 $$
-f(x) = i(x) : ( - \frac{2a+b}{5} , \frac{2a+b-5t}{15} ) 
+f(x) = i(x) : x= -\frac{2a+b}{5} , y= \frac{2a+b-5t}{15}
 $$
 $$
-g(x) = h(x) : ( 0 , - \frac{a+2b+5t}{15} )
+g(x) = h(x) : x= 0 , y= - \frac{a+2b+5t}{15}
 $$
 $$
-g(x) = i(x) : ( - \frac{a+2b}{4} , \frac{a+2b-5t}{12} ) 
+g(x) = i(x) : x= -\frac{a+2b}{4} , y= \frac{a+2b-5t}{12}
 $$
 $$
-h(x) = i(x) : ( 0 , - \frac{t}{3} )
+h(x) = i(x) : x= 0 , y= -\frac{t}{3}
 $$
 이다.
 
