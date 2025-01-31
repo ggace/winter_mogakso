@@ -54,6 +54,10 @@
 - [tcache_dup2](/hack/dreamhack/tcache_dup2/README.md)
 - [sint](/hack/dreamhack/sint/README.md)
 
+### 2025.01.31
+#### algorithm
+- [나이트의 여행](/algorithm/baekjoon/4161/README.md)
+
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)
