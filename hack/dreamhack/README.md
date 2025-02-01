@@ -11,3 +11,10 @@
 ### 2025.01.26
 - [tcache_dup2](/hack/dreamhack/tcache_dup2/README.md)
 - [sint](/hack/dreamhack/sint/README.md)
+
+### 2025.02.01
+- [validator](/hack/dreamhack/validator/README.md)
+
+## 성과
+### system hacking 드림핵 학습 과정 완료
+![end](image.png)

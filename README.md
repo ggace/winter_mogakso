@@ -56,9 +56,20 @@
 
 ### 2025.01.31
 #### algorithm
-- [나이트의 여행](/algorithm/baekjoon/4161/README.md)
+- [나이트의 여행(4161)](/algorithm/baekjoon/4161/README.md)
+
+### 2025.02.01
+#### dreamhack
+- [validator](/hack/dreamhack/validator/README.md)
+- 드림핵 System hacking 학습 과정 완료
 
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)
 ### 3. 해킹 -> [이동](/hack/README.md)
+
+## 성과
+### Segment Tree
+[세그트리 구현](/algorithm/study/segtree/README.md)
+### 드림핵 System hacking 학습 과정 완료
+![end](image.png)
