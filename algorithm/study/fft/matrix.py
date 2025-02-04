@@ -2,19 +2,21 @@ from math import *
 import numpy as np
 from calculate_matrix import *
 
-def T(n):
+max_T = np.array([])
+
+def matrix_initialize(n):
+    global max_T
     n = int(n)
-    matrix = []
-    for a in range(n):
-        temp_matrix = []
-        for b in range(n):
-            if(a == b):
-                k = -pi * a / (n)
-                temp_matrix.append(np.exp(1j * k))
-            else:
-                temp_matrix.append(0)
-        matrix.append(temp_matrix)
-    return np.array(matrix)
+    matrix = np.identity(n, dtype=np.complex_)
+    for i in range(n):
+        k = -pi * i / n
+        matrix[i][i] = np.exp(1j * k)
+    max_T = matrix
+
+def T(n):
+    global max_T
+    c = len(max_T)//n
+    return max_T[::c, ::c]
 
 def C(n):
     n = int(n)
@@ -40,9 +42,11 @@ def F(l):
 
     t_n = np.dot(T_n, F_n_2)
 
+    percent = 100 * l/len(max_T)
+    print("fft process: %7.3f" % percent, end=" %\n")
+
     matrix = attach(merge(F_n_2, t_n),  merge(F_n_2, minus(t_n)))
 
     return matrix
-    
 
 
