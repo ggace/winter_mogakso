@@ -1,5 +1,5 @@
 # FFT
-[https://great-bean-71f.notion.site/FFT-23ff71184f4247ebafc516e461892a3c](노션)
+[https://great-bean-71f.notion.site/FFT-23ff71184f4247ebafc516e461892a3c](https://great-bean-71f.notion.site/FFT-23ff71184f4247ebafc516e461892a3c)
 이 글은 소프트웨어학과 김민서(github 주인)가 2024 동계모각소 '집가고 싶다' 노션 페이지에 먼저 작성한 글이다.
 
 먼저 fft를 알기 위해서는 ft, 즉 푸리에 변환이 무엇인지부터 알아야 한다. 하지만, 이 페이지에서 푸리에 변환, 이산 푸리에 변환, 고속 푸리에 변환을 모두 살펴보기엔 무리가 있기 때문에 푸리에 변환과 관련된 영상을 보는 것을 추천한다. 
