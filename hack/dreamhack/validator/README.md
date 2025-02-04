@@ -170,7 +170,7 @@ p.interactive()
 이다.
 
 이를 실행시키면, 
-```
+```bash
 [*] Switching to interactive mode
 $ ls
 flag

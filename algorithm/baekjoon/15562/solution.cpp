@@ -25,7 +25,7 @@ vector<vector<ll>> parents(1010101);
 vector<vector<ll>> childs(1010101);
 ll depths[1010101];
 
-bool is_possible[1010101];
+bool is_visited[1010101];
 
 int main(int argc, char* argv[]) {
     fio; 
@@ -43,58 +43,28 @@ int main(int argc, char* argv[]) {
 
     ll result = 0;
 
-    queue<array<ll, 2>> q;
+    queue<ll> q;
     
     for(int i = 1; i <= n; i++) {
         if(parents[i].empty()) {
-            q.push({i, 0});
+            q.push(i);
         }
     }
 
     while(!q.empty()) {
-        auto [cur_index, cur_depth] = q.front();
+        ll cur_index = q.front();
         q.pop();
 
-        
-        
-        is_possible[cur_index] = true;
-        depths[cur_index] = cur_depth;
-
-        ll push_count = 0;
-
-        for(ll next_index : childs[cur_index]) {
-            bool is_push = true;
-            bool is_root = false;
-            ll count = 0;
-            for(ll root_of_next_index : parents[next_index]) {
-                if(!is_possible[root_of_next_index]) {
-                    is_push = false;
-                    break;
-                }
-                else if(depths[root_of_next_index] == cur_depth) {
-                    ++count;
-                }
-
-                if(depths[root_of_next_index] == 0) {
-                    is_root = true;
-                }
+        for(auto child : childs[cur_index]) {
+            if(is_visited[child]) {
+                continue;
             }
-            if(is_push) {
-                q.push({next_index, cur_depth + 1});
-                result += count;
-                depths[next_index] = cur_depth+1;
-                ++push_count;
-            }
-            
+            q.push(child);
+            is_visited[child] = true;
+            result++;
         }
 
-        if(!push_count && cur_depth == 0) {
-            q.push({cur_index, cur_depth+1});
-            depths[cur_index] = cur_depth+1;
-            is_possible[cur_index] = false;
-        }
-
-        debug(cur_index << " " << cur_depth << ": " << result);
+        debug(cur_index <<  ": " << result);
     }
 
     cout << result << "\n";
