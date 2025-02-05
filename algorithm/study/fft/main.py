@@ -1,27 +1,13 @@
 from math import *
-from matrix import *
-from calculate_matrix import *
 from matplotlib import pyplot as plt
-from graph import *
 from data import *
 from fft import *
 
 # initialize
-t = 24
-Fs = 256
+t = 2
+Fs = 1000000
 
 x, y = preprocess_data(get_data(t, Fs), t, Fs)
-
-if(len(x) > 8192):
-    print('\033[91m', end="")
-    print("[Warning]")
-    print('\033[37m', end="")
-    print("  the size of data is too big. It may be killed by system.")
-    print("  Will you keep running this program?")
-    if(input("\033[93m  [Y/n] > \033[37m").lower() != 'y'):
-        print("process end")
-        exit(0)
-
 
 print('''
 =======================
@@ -59,14 +45,12 @@ print("| %-15s\t | %-15s\t\t | %-22s \t | %-15s |" % ('f', 'value', 'real comple
 print("------------------------------------------------------------------------------------------------------------")
 for i in range(len(result)):
     m = result[i]
-    value = np.abs(m[0])/len(y)
+    value = abs(m)/len(y)
     f = i*Fs/len(y)
 
     # value of fft is similar with T * Fs / 2 if the f is match.
-    if(value >0.2):
-        print("| %15.10f\t | %15.10f\t\t | %10.5f+%10.5fi \t | %15.10f |"%(f, value, np.real(m[0]), np.imag(m[0]), 1/f if(f != 0) else inf))
-        if(is_show_graph):
-            drawGraphInComplex(t, Fs, i, y)
+    if(value > 0.3):
+        print("| %15.10f\t | %15.10f\t\t | %10.5f+%10.5fi \t | %15.10f |"%(f, value, m.real, m.imag, 1/f if(f != 0) else inf))
 
     # for final fft result
     f_list.append(f)
