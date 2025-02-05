@@ -30,8 +30,8 @@ def fft(x):
         
         if(i > size):
             break;
-        
-        print("%12.8f"%((size - size/i)/size * 100), end=" %\n")
+
+        print("\r%12.8f"% ((size - size/i)/size * 100), end=" %")
 
         for t in range(size//i):
             
@@ -46,9 +46,7 @@ def fft(x):
                 C_m[front_index] = front + Wk * back
                 C_m[back_index]  = front - Wk * back
 
-                # print(f"{front_index} + {j}_{i} {back_index}")
-                # print(f"{front_index} - {j}_{i} {back_index}")
-                # print()
         i <<= 1
 
+    print("\r%12.8f"% (100), end=" %\n")
     return C_m

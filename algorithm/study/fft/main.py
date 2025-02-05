@@ -30,19 +30,21 @@ if(is_show_graph):
     plt.title("data")
     plt.show()
 
+
 # do fft
-print("====== fft start ======")
+print()
+print("== fft start ==")
 result = fft(y)
-print("======= fft end ======")
+print("=== fft end ===")
 
 # show the fft result
 f_list = []
 fft_result = []
 
 print()
-print("------------------------------------------------------------------------------------------------------------")
-print("| %-15s\t | %-15s\t\t | %-22s \t | %-15s |" % ('f', 'value', 'real complex', 'lambda'))
-print("------------------------------------------------------------------------------------------------------------")
+print("----------------------------------------------------------------------------")
+print("| %-15s\t | %-15s\t\t | %-15s |" % ('f', 'value', 'lambda'))
+print("----------------------------------------------------------------------------")
 for i in range(len(result)):
     m = result[i]
     value = abs(m)/len(y)
@@ -50,12 +52,12 @@ for i in range(len(result)):
 
     # value of fft is similar with T * Fs / 2 if the f is match.
     if(value > 0.3):
-        print("| %15.10f\t | %15.10f\t\t | %10.5f+%10.5fi \t | %15.10f |"%(f, value, m.real, m.imag, 1/f if(f != 0) else inf))
+        print("| %15.10f\t | %15.10f\t\t | %15.10f |"%(f, value, 1/f if(f != 0) else inf))
 
     # for final fft result
     f_list.append(f)
     fft_result.append(value)
-print("------------------------------------------------------------------------------------------------------------")
+print("----------------------------------------------------------------------------")
 
 
 if(is_show_graph):

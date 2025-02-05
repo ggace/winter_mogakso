@@ -9,7 +9,7 @@ def get_data(T, Fs):
     for i in range(T*Fs):
         x.append(i/Fs)
     for i in x:
-        y.append(0.7*sin(2*pi*10*i))
+        y.append(0.7*sin(2*pi*10*i) + sin(2*pi*150 * i) + sin(2*pi * 50 * i))
 
     return (x, y)
 
