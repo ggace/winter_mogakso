@@ -33,9 +33,7 @@ if(is_show_graph):
 
 # do fft
 print()
-print("== fft start ==")
 result = fft(y)
-print("=== fft end ===")
 
 # show the fft result
 f_list = []

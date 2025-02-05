@@ -22,16 +22,19 @@ def C(x):
     return matrix
 
 def fft(x):
+    print(f"\r[fft processing] (0 / {len(x)})", end="")
+
     C_m = C(x)
     size = len(C_m)
     
+
     i = 2
     while(True):
         
         if(i > size):
             break;
 
-        print("\r%12.8f"% ((size - size/i)/size * 100), end=" %")
+        print("\r[fft processing] (%d / %d)"% ((size - size/i), size), end="")
 
         for t in range(size//i):
             
@@ -48,5 +51,5 @@ def fft(x):
 
         i <<= 1
 
-    print("\r%12.8f"% (100), end=" %\n")
+    print("\r[fft processing] (%d / %d)"% (size, size))
     return C_m
