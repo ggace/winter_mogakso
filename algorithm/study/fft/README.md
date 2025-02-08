@@ -179,9 +179,3 @@ $$
 즉, $F_N$을 구하기 위해, $F_{N/2}$를 한번씩만 구하면 되기 때문에 시간복잡도는 각 주파수 k에 대해 $O(\log N)$만큼으로 감소한다.
 
 따라서, $N = 2^t$와 같이 2의 거듭 제곱 꼴의 데이터를 가졌을 때, 분할 정복을 통해 dft를 계산할 수 있고 이를 fft라  부른다.
-
-**※ 코드는 너무 길어 파일을 나눠 작성하였기 때문에 github에 올려두었으며, 행렬곱 알고리즘을 직접 작성했을때, $O(n^3)$으로 작성되기 때문에 fft의 장점을 확인하지 못하기 때문에 numpy의 행렬곱 연산을 활용하였다.**
-
-코드: 
-
-[winter_mogakso/algorithm/study/fft at main · ggace/winter_mogakso](https://github.com/ggace/winter_mogakso/tree/main/algorithm/study/fft)

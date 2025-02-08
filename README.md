@@ -63,6 +63,41 @@
 - [validator](/hack/dreamhack/validator/README.md)
 - 드림핵 System hacking 학습 과정 완료
 
+### 2025.02.04
+#### algorithm
+- [간선 끊어가기(14285)](/algorithm/baekjoon/14285/README.md)
+- [그래프 게임(30411)](/algorithm/baekjoon/30411/README.md)
+
+### 2025.02.05
+## sql
+- [131112](/sql/programmers/131112.SQL)
+- [131118](/sql/programmers/131118.sql)
+- [131120](/sql/programmers/131120.SQL)
+- [131535](/sql/programmers/131535.SQL)
+- [131536](/sql/programmers/131536.sql)
+- [131537](/sql/programmers/131537.sql)
+- [132201](/sql/programmers/132201.SQL)
+- [132203](/sql/programmers/132203.SQL)
+- [133024](/sql/programmers/133024.SQL)
+- [133025](/sql/programmers/133025.SQL)
+- [144853](/sql/programmers/144853.SQL)
+- [151136](/sql/programmers/151136.sql)
+- [164673](/sql/programmers/164673.SQL)
+- [273711](/sql/programmers/273711.SQL)
+- [276013](/sql/programmers/276013.SQL)
+- [276034](/sql/programmers/276034.SQL)
+- [293258](/sql/programmers/293258.SQL)
+- [298517](/sql/programmers/298517.SQL)
+- [298518](/sql/programmers/298518.SQL)
+- [299305](/sql/programmers/299305.SQL)
+- [299307](/sql/programmers/299307.SQL)
+- [301646](/sql/programmers/301646.SQL)
+- [301647](/sql/programmers/301647.SQL)
+- [301649](/sql/programmers/301649.SQL)
+- [301650](/sql/programmers/301650.SQL)
+- [301651](/sql/programmers/301651.SQL)
+- [59035](/sql/programmers/59035.sql)
+
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)
@@ -71,5 +106,9 @@
 ## 성과
 ### Segment Tree
 [세그트리 구현](/algorithm/study/segtree/README.md)
+### fft
+[fft 구현](/algorithm/study/fft/README.md)
 ### 드림핵 System hacking 학습 과정 완료
 ![end](image.png)
+### 프로그래머스 sql 고득점 kit - SELECT 완료
+![sql end](image-1.png)

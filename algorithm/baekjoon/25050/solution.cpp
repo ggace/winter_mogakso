@@ -21,81 +21,85 @@ typedef unsigned long long ull;
 
 using namespace std;
 
-ll fastpow(ll a, ll n, ll c){
-    ll result=1;
-    while(n){
-        if(n&1){
-            result *=a;
-            if(result>=c) result%=c;
-        }
-        a*=a;
-        if(a>=c) a%=c;
-        n>>=1;
-    }
-    return result;
-}
-
-vector<ll> prime_list;
-bool is_prime[PRIME_SIZE+1] = {1,1,0}; // 0이 소수
-void siv(ll n) {
-    for(int i = 2; i <= n; i++) {
-        if(!is_prime[i]) prime_list.push_back(i);
-        for(auto p : prime_list) {
-            if(i*p > n) break;
-            is_prime[i*p] = true;
-            if(i%p == 0) break;
-        }
-    }
-}
-
 ll n, m;
-vector<vector<array<ll, 3>>> edges(2020); // to, weight, number
+vector<vector<array<ll, 2>>> edges(2020); // to, weight, number
+bool visited[2020];
+
 ll edges_count[5050];
 ll track[5050];
-ll visited[2020];
+ll weights[5050];
 
-vector<vector<ll>> count_sort(5050);
+map<array<ll, 2>, ll> edge_number;
+map<ll, vector<ll>> count_sort;
+
+vector<vector<ll>> backtrack_tree(2020);
+bool backtrack_visited[2020];
+
+ll dfs(ll before, ll start) {
+    // debug(start);
+    // cout << before << " " << start << "\n";
+
+    if(backtrack_tree[start].size() == 0) {
+        ++edges_count[edge_number[{before, start}]];
+
+        // cout << edge_number[{before, start}] << ": " << 1 << "\n\n";
+        return 1;
+    }
+
+    ll temp = 1;
+    for(auto next : backtrack_tree[start]) {
+        
+        if(backtrack_visited[next]) {
+            continue;
+        }
+        backtrack_visited[next] = true;
+        temp += dfs(start, next);
+    }
+    // cout << edge_number[{before, start}] << ": " << temp << "\n\n";
+    if(before)
+        edges_count[edge_number[{before, start}]] += temp;
+    return temp;
+}
 
 void djikstra(ll start) {
-    memset(track, -1, sizeof(track));
+    memset(track, 0, sizeof(track));
+    fill_n(weights, 5050, LONG_LONG_MAX);
+    memset(backtrack_visited, 0, sizeof(backtrack_visited));
     memset(visited, 0, sizeof(visited));
 
-    priority_queue<array<ll, 3>> pq; // -weight, cur, used_edge
+    for(ll i = 0; i <= n; i++) {
+        backtrack_tree[i].clear();
+    }
 
-    pq.push({0, start, 0});
+    priority_queue<array<ll, 2>, vector<array<ll, 2>>, greater<array<ll, 2>>> pq; // -weight, cur, used_edge
+
+    pq.push({0, start});
+    weights[start] = 0;
 
     while(!pq.empty()) {
-        auto [cur_weight, cur_index, used_edge] = pq.top();
-        cur_weight = -cur_weight;
+        auto [cur_weight, cur_index] = pq.top();
         pq.pop();
 
-        if(visited[cur_index]) {
-            continue;
-        }
-        visited[cur_index] = true;
-
-        for(auto [next, next_weight, next_number] : edges[cur_index]) {
-            if(visited[next]) {
+        for(auto [next, next_weight] : edges[cur_index]) {
+            if(weights[next] <= weights[cur_index] + next_weight) {
                 continue;
             }
-            track[next_number] = used_edge;
-            pq.push({-cur_weight-next_weight, next, next_number});
+            weights[next] = weights[cur_index] + next_weight;
+            track[next] = cur_index;
+            pq.push({weights[cur_index]+next_weight, next});
         }
     }
 
-    for(ll i = 1; i <= m; i++) {
-        if(track[i] == -1) {
-            continue;
+    for(ll i = 1; i <= n; i++) {
+        if(!track[i] || visited[i]) continue;
+        
+        for(ll j = i; j != start && !visited[j]; j = track[j]) {
+            backtrack_tree[track[j]].push_back(j);
+            visited[j] = true;
         }
-        // ll t = 1;
-        for(ll j = i; j != 0;) {
-            cout << j << " -> ";
-            edges_count[j]++;
-            j = track[j];
-            // t++;
-        }
-        cout << "\n";
     }
+
+    dfs(0, start);
 }
 
 int main(int argc, char* argv[]) {
@@ -106,7 +110,8 @@ int main(int argc, char* argv[]) {
     for(int i = 0; i < m; i++) {
         ll a, b, c;
         cin >> a >> b >> c;
-        edges[a].push_back({b, c, i+1});
+        edges[a].push_back({b, c});
+        edge_number[{a, b}] = i+1;
     }
 
     for(int i = 1; i <= n; i++) {
@@ -118,10 +123,11 @@ int main(int argc, char* argv[]) {
     for(int i = 1; i <= m; i++) {
         debug(i << ": " << edges_count[i]);
         count_sort[edges_count[i]].push_back(i);
-        if(max_value < edges_count[i]) {
-            max_value = edges_count[i];
-        }
+
+        max_value = max(max_value, edges_count[i]);
     }
+
+    sort(count_sort[max_value].begin(), count_sort[max_value].end());
 
     cout << count_sort[max_value].size() << "\n";
 
