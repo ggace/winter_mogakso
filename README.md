@@ -69,7 +69,7 @@
 - [그래프 게임(30411)](/algorithm/baekjoon/30411/README.md)
 
 ### 2025.02.05
-## sql
+#### sql
 - [131112](/sql/programmers/131112.SQL)
 - [131118](/sql/programmers/131118.sql)
 - [131120](/sql/programmers/131120.SQL)
