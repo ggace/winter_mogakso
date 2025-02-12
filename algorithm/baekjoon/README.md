@@ -29,3 +29,10 @@
 
 ### 2025.01.06 ~ 2025.01.31
 - [4161 - 나이트의 여행](/algorithm/baekjoon/4161/README.md)
+
+### 2025.02.04
+- [간선 끊어가기(14285)](/algorithm/baekjoon/14285/README.md)
+- [그래프 게임(30411)](/algorithm/baekjoon/30411/README.md)
+
+### 2025.02.08
+- [최고의 간선(25050)](/algorithm/baekjoon/25050/README.md)

@@ -10,6 +10,7 @@
         "vector": "cpp",
         "any": "cpp",
         "system_error": "cpp",
-        "cmath": "c"
+        "cmath": "c",
+        "iostream": "cpp"
     }
 }

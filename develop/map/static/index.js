@@ -45,6 +45,8 @@ var clusterer = new kakao.maps.MarkerClusterer({
     }]
 });
 
+var infowindow_list = []
+
 $.ajax({
     url:"/university.json",
     type: "get",
@@ -57,31 +59,41 @@ $.ajax({
         var imageSize = new kakao.maps.Size(30, 45); 
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
         for (var i = 0; i < result.length; i++) {
-            let position = {
-                title: result[i]["학교명"],
-                latlng: new kakao.maps.LatLng(result[i]["위도"], result[i]["경도"])
-            }
+            let school = result[i];
+
+            let position = new kakao.maps.LatLng(school["위도"], school["경도"]);
+            let title = school["학교명"];
+            let url = school["학교홈페이지"];
+            let zipcode = school["우편번호"];
+            let address = school["도로명주소"];
+            let fixedUrl = url.startsWith("http") ? url : `https://${url}`;
+
 
             var infowindow = new kakao.maps.InfoWindow({
                 content: `
-                <div style="padding: 10px; height: 100px; width: 250px">
-                    <div style="font-size: 15px">
-                        ${result[i]["학교명"]}
+                <div class="infowindow" id="infoWindow-${i}" style="padding: 10px; width: 300px;">
+                    <div style="font-size: 15px; font-weight: bold;">${title}</div>
+                    <div style="font-size: 12px; margin-bottom: 5px;">${zipcode} ${address}</div>
+                    <div style="margin-top: 3px;" id="preview-container">
+                        <!--<iframe id="iframe-${i} iframe-preview" style="border: none; overflow: hidden" src='${fixedUrl}' allowfullscreen></iframe>-->
                     </div>
-                    <div style="font-size: 10px">
-                        ${result[i]["우편번호"]} ${result[i]["도로명주소"]}
+                    <div style="font-size: 12px; margin-top: 5px;">
+                        <a href="${fixedUrl}" target="_blank" style="color: blue; text-decoration: none;">
+                            ${url}</div>
+                        </a>
                     </div>
-
                 </div>
                 `,
                 removable: true
             });
 
+            infowindow_list.push(infowindow)
+
             
             var marker = new kakao.maps.Marker({
                 map: map, 
-                position: position.latlng, 
-                title : position.title, 
+                position: position, 
+                title : title, 
                 image : markerImage,
                 text: result
             });
@@ -122,26 +134,19 @@ kakao.maps.event.addListener(clusterer, 'clusterclick', function(cluster) {
 // 인포윈도우를 표시하는 클로저를 만드는 함수
 function makeClickListener(map, marker, infowindow) {
     return function() {
+        for(let i  = 0; i < infowindow_list.length; i++) {
+            infowindow_list[i].close();
+            console.log(infowindow_list[i]);
+        }
         infowindow.open(map, marker);
     };
 }
 
 let infowindow_trigger;
+
+// 홈페이지 미리보기 표시 함수
+function showPreview(index, url) {
     
-// 인포윈도우를 닫는 클로저를 만드는 함수
-function makeClickListener(map, marker, infowindow, index) {
-    return function() {
-        if(infowindow_trigger === infowindow) {
-            infowindow.close();
-            infowindow_trigger = null;
-            return;
-        }
-        else if(infowindow_trigger){
-            infowindow_trigger.close();
-            infowindow_trigger = null;
-        }
-        infowindow.open(map, marker)
-        infowindow_trigger = infowindow
-        
-    };
+    document.getElementById(`iframe-${index}`).src = url; // iframe에 URL 설정
+    document.getElementById(`preview-${index}`).style.display = "block"; // iframe 보이기
 }

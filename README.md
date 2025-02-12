@@ -98,6 +98,24 @@
 - [301651](/sql/programmers/301651.SQL)
 - [59035](/sql/programmers/59035.sql)
 
+### 2025.02.08
+#### algorithm
+- [최고의 간선(25050)](/algorithm/baekjoon/25050/README.md)
+#### dreamhack
+- [off_by_one_000](/hack/dreamhack/off_by_one_000/README.md)
+
+
+### 2025.02.09
+#### dreamhack
+- [rev-basic-0](/hack/dreamhack/rev-basic-0/README.md)
+- [rev-basic-1](/hack/dreamhack/rev-basic-1/README.md)
+- [rev-basic-3](/hack/dreamhack/rev-basic-3/README.md)
+
+### 2025.02.10
+#### dreamhack
+- [patch](/hack/dreamhack/patch//README.md)
+- [please, please, please](/hack/dreamhack/please%20please%20please/README.md)
+
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)

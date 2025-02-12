@@ -80,6 +80,7 @@ void djikstra(ll start) {
         auto [cur_weight, cur_index] = pq.top();
         pq.pop();
 
+        if(weights[cur_index]!=cur_weight) continue;
         for(auto [next, next_weight] : edges[cur_index]) {
             if(weights[next] <= weights[cur_index] + next_weight) {
                 continue;

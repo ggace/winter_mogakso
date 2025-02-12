@@ -27,6 +27,9 @@ def university_json():
     UNIVERSITY_LIST = make_response(res)
     return UNIVERSITY_LIST
 
+@app.route("/detail")
+def detail():
+   return render_template('detail.html')
 
 
 if __name__ == "__main__":
