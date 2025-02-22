@@ -1,6 +1,7 @@
 from math import *
 
 def C(x):
+    print(x)
     n = 1
     log_n = 0
     while(n < len(x)):
@@ -18,6 +19,7 @@ def C(x):
                 temp |= reverse_binary
             reverse_binary >>= 1
             binary <<= 1
+        print(temp)
         matrix.append(x[temp])
     return matrix
 

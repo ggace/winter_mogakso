@@ -10,13 +10,8 @@ using Complex = complex<double>;
 
 vector<double> get_data(int T, int Fs) {
     vector<double> x, y;
-    for (int i = 0; i < T * Fs; i++) {
-        x.push_back(i / static_cast<double>(Fs));
-    }
-    for (double i : x) {
-        y.push_back(0.7 * sin(2 * M_PI * 10 * i) + sin(2 * M_PI * 150 * i) + sin(2 * M_PI * 50 * i));
-    }
-    return y;
+    
+    return {2, 3, 1, 0, 0};
 }
 
 vector<double> preprocess_data(const vector<double>& data, int T, int Fs) {
@@ -101,17 +96,14 @@ int main() {
     
     vector<double> f_list, fft_result;
     
-    cout << "\n";
-    cout << "-------------------------------------------------------" << endl;
-    cout << "| " << setw(15) << "f" << " | " << setw(15) << "value" << " | " << setw(15) << "lambda" << " |" << endl;
-    cout << "-------------------------------------------------------" << endl;
+    
     
     for (size_t i = 0; i < result.size(); i++) {
         double value = abs(result[i]) / y.size();
         double f = i * Fs / y.size();
-        if (value > 0.3) {
-            cout << "| " << setw(15) << f << " | " << setw(15) << value << " | " << setw(15) << (f != 0 ? 1 / f : INFINITY) << " |" << endl;
-        }
+        
+        cout << " " << setw(15) << f << " " << setw(15) << value << " " << setw(15) << (f != 0 ? 1 / f : INFINITY) << " " << real(result[i]) << "+i" << imag(result[i]) << endl;
+        
         f_list.push_back(f);
         fft_result.push_back(value);
     }

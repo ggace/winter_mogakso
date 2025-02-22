@@ -21,33 +21,6 @@ typedef unsigned long long ull;
 
 using namespace std;
 
-ll fastpow(ll a, ll n, ll c){
-    ll result=1;
-    while(n){
-        if(n&1){
-            result *=a;
-            if(result>=c) result%=c;
-        }
-        a*=a;
-        if(a>=c) a%=c;
-        n>>=1;
-    }
-    return result;
-}
-
-vector<ll> prime_list;
-bool is_prime[PRIME_SIZE+1] = {1,1,0}; // 0이 소수
-void siv(ll n) {
-    for(int i = 2; i <= n; i++) {
-        if(!is_prime[i]) prime_list.push_back(i);
-        for(auto p : prime_list) {
-            if(i*p > n) break;
-            is_prime[i*p] = true;
-            if(i%p == 0) break;
-        }
-    }
-}
-
 ll v, e;
 ll s;
 vector<vector<pll>> edges(20202);

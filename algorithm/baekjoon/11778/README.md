@@ -8,7 +8,7 @@ n과 m이 주어졌을때, n번째 피보나치 수와, m번째 피보나치 수
 2024 동계 모각소 '집가고싶다' 노션 페이지에 정리된것처럼, n과 m의 최대공약수인 수를 k라 하면, k번째 피보나치 수가 n번째 피보나치 수와 m번째 피보나치수의 최대공약수이다.
 
 ## 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

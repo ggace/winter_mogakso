@@ -60,7 +60,7 @@ $$
 따라서 매 곱셈마다 $mod c$ 를 통해 64번의 반복 연산만으로 a^n(mod c) 를 구할 수 있게 된다.
 
 ### 4) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

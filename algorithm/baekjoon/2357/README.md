@@ -12,7 +12,7 @@ a b가 입력될 시, a부터 b까지의 최솟값과 최댓값을 출력한다.
 - [세그먼트 트리 페이지](/algorithm/study/segtree/README.md)
 
 ## 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

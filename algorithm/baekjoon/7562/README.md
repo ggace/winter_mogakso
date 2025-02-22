@@ -8,7 +8,7 @@ i * i 크기를 가진 체스판이 있을때, (0,0)에서 시작한 나이트�
 기본 bfs문제이다. 크기를 정한 공간 내에서 횟수를 구해가며 해당 지점에 도착했다면, 그 값을 출력하면 된다.
 
 ## 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

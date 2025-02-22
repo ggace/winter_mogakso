@@ -22,7 +22,7 @@
 이를 이용해, key값을 얻어 이를 변조 및 출력할 수 있도록 할 수 있다.
 
 ## 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

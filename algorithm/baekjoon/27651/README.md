@@ -15,7 +15,7 @@ $$
 이때, body의 값은 $head + \frac{나머지}{2} < RESULT < 나머지 - head$ 일 것이다. 따라서 upper_bound($head + \frac{나머지}{2}$)와 lower_bound($나머지 - head$)의 차가 가능한 경우의 수가 된다.
 
 ## 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

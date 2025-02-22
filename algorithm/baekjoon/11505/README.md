@@ -14,7 +14,7 @@
 - [세그먼트 트리 페이지](/algorithm/study/segtree/README.md)
 
 ## 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

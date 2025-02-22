@@ -11,7 +11,7 @@ A팀과 B팀이 5분마다 득점할 확률이 주어진다.
 이때, 18 * 18정도의 시간 복잡도가 들기 때문에 바로 브루트 포스로 이를 구하면 된다.
 
 ## 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;

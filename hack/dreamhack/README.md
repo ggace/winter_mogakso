@@ -27,7 +27,14 @@
 - [patch](/hack/dreamhack/patch//README.md)
 - [please, please, please](/hack/dreamhack/please%20please%20please/README.md)
 
+### 2025.02.14
+- [p_rho](/hack/dreamhack/p_rho/README.md)
+
+### 2025.02.16
+- [Double DES](/hack/dreamhack/double%20DES/README.md)
+
 ## 성과
 ### system hacking 드림핵 학습 과정 완료
 ![end](image.png)
 ![end](image-1.png)
+![end](image-2.png)

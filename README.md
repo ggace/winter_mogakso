@@ -67,7 +67,6 @@
 #### algorithm
 - [간선 끊어가기(14285)](/algorithm/baekjoon/14285/README.md)
 - [그래프 게임(30411)](/algorithm/baekjoon/30411/README.md)
-
 ### 2025.02.05
 #### sql
 - [131112](/sql/programmers/131112.SQL)
@@ -116,6 +115,45 @@
 - [patch](/hack/dreamhack/patch//README.md)
 - [please, please, please](/hack/dreamhack/please%20please%20please/README.md)
 
+### 2025.02.11
+#### algorithm
+- [최단경로(1753)](/algorithm/baekjoon/1753/README.md)
+- [가장 긴 증가하는 부분 수열4(14002)](/algorithm/baekjoon/14002/README.md)
+- [Euclid(19171)](/algorithm/baekjoon/19171/README.md)
+
+### 2025.02.13
+#### algorithm
+- [최소비용 구하기 2(11779)](/algorithm/baekjoon/11779/README.md)
+- [여행가자(1976)](/algorithm/baekjoon/1976/README.md)
+
+### 2025.02.14
+#### dreamhack
+- [p_rho](/hack/dreamhack/p_rho/README.md)
+
+### 2025.02.15
+#### algorithm
+- [합과 곱(1353)](/algorithm/baekjoon/1353/README.md)
+- [가장 긴 증가하는 부분수열 3(12738)](/algorithm/baekjoon/12738/README.md)
+- [가장 긴 증가하는 부분수열 5(14003)](/algorithm/baekjoon/14003/README.md)
+- [가장 긴 증가하는 부분수열 2(12015)](/algorithm/baekjoon/12015/README.md)
+- [A/B 2(15792)](/algorithm/baekjoon/15792/README.md)
+- [매우 어려운 문제(31738)](/algorithm/baekjoon/31738/README.md)
+- [다음 소수(4134)](/algorithm/baekjoon/4134/README.md)
+
+### 2025.02.16
+#### dreamhack
+- [Double DES](/hack/dreamhack/double%20DES/README.md)
+
+### 2025.02.17
+#### algirithm
+- [LCA 2(11438)](/algorithm/baekjoon/11438/README.md)
+
+### 2025.02.21
+#### algorithm
+- [좌표 압축(18870)](/algorithm/baekjoon/18870/README.md)
+- [행렬 제곱(10830)](/algorithm/baekjoon/10830/README.md)
+- [Strongly Connected Component(2150)](/algorithm/baekjoon/2150/README.md)
+
 ## 주제
 ### 1. 알고리즘 -> [이동](/algorithm/README.md)
 ### 2. 컴퓨터과학 -> [이동](/computer_science/README.md)
@@ -131,3 +169,7 @@
 ![end](image.png)
 ### 프로그래머스 sql 고득점 kit - SELECT 완료
 ![sql end](image-1.png)
+### 드림핵 Reverse Engineering 학습 과정 완료
+![end](image-2.png)
+### solved.ac 플레티넘 달성
+![platinum](image-3.png)

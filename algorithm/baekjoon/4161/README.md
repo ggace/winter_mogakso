@@ -193,7 +193,7 @@ $$
 #### 이때, 함수 $f$~ $i$ 의 기울기는 각각 $-\frac{3}{4}$, $-\frac{3}{5}$, $-\frac{1}{3}$이므로, 좌표의 $-2$ ~ $2$의 범위내에 최솟값이 있을것이라 생각했다. 
 
 ## 3. 코드
-```c
+```cpp
 typedef long long ll;
 
 #define fio cin.tie(0);cout.tie(0);ios_base::sync_with_stdio(false);

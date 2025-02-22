@@ -19,7 +19,7 @@
 따라서, 이를 출력하면 원하는 결과를 얻을 수 있다.
 
 ### 3) 코드
-```c
+```cpp
 typedef long double ld;
 typedef long long ll;
 typedef unsigned long long ull;
